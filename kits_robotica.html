@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kits de Robótica - Robotikids</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    nav {
+      background: #fff;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #007BFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #28a745; }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #eef5ff;
+    }
+    header h1 { color: #007BFF; }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .kit {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .kit:hover { transform: scale(1.03); }
+    .kit img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .kit h3 { color: #28a745; }
+    .precio {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #007BFF;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #28a745; }
+
+    .volver {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 20px;
+      background: #ff5733;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      width: fit-content;
+      transition: 0.3s;
+    }
+    .volver:hover { background: #c70039; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú -->
+  <nav>
+    <a href="index.html#inicio">Inicio</a>
+    <a href="index.html#cursos">Cursos</a>
+    <a href="index.html#kits">Kits</a>
+    <a href="index.html#galeria">Galería</a>
+    <a href="index.html#contacto">Contacto</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Kits de Robótica</h1>
+    <p>Encuentra todo lo que necesitas para tus proyectos de robótica 🤖</p>
+  </header>
+
+  <!-- Productos -->
+  <div class="contenedor">
+    <div class="kit">
+      <img src="kit_robotica1.jpg" alt="Kit de Robótica Básica">
+      <h3>Kit de Robótica Básica</h3>
+      <p>Incluye motores, sensores y placas Arduino para proyectos iniciales.</p>
+      <p class="precio">$150,000 COP</p>
+      <a href="https://wa.me/573001234567" class="btn">Comprar</a>
+    </div>
+    <div class="kit">
+      <img src="kit_robotica2.jpg" alt="Kit de Robótica Avanzada">
+      <h3>Kit de Robótica Avanzada</h3>
+      <p>Componentes completos para armar robots móviles y con sensores inteligentes.</p>
+      <p class="precio">$280,000 COP</p>
+      <a href="https://wa.me/573001234567" class="btn">Comprar</a>
+    </div>
+  </div>
+
+  <!-- Botón Volver -->
+  <a href="index.html" class="volver">⬅ Volver a la página principal</a>
+
+  <footer>
+    <p>&copy; 2025 Robotikids. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

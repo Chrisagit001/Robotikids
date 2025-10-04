@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kits - Academia de Robótica y Electrónica</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* --- ESTILOS DEL APARTADO DE KITS --- */
+    body {
+      background-color: #f8f9fc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .selector {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    select {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .kits-section {
+      display: none;
+      text-align: center;
+    }
+
+    .kits-section.active {
+      display: block;
+    }
+
+    .kit-card {
+      display: inline-block;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      width: 260px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .kit-card:hover {
+      transform: scale(1.05);
+    }
+
+    .kit-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .precio {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #0078d7;
+    }
+
+    .btn-vermas {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #0078d7;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .btn-vermas:hover {
+      background-color: #005fa3;
+    }
+
+    .volver {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      color: #0078d7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      color: #004c94;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007BFF;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENÚ -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="kits.html" class="active">Kits</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header>
+    <h1>Kits Educativos</h1>
+    <p>Selecciona el tipo de kits que quieres explorar 👇</p>
+  </header>
+
+  <!-- SELECTOR -->
+  <div class="selector">
+    <select id="tipoKits" onchange="mostrarKits()">
+      <option value="">-- Selecciona una categoría --</option>
+      <option value="robotica">Kits de Robótica</option>
+      <option value="electronica">Kits de Electrónica</option>
+    </select>
+  </div>
+
+  <!-- SECCIÓN DE ROBÓTICA -->
+  <section id="robotica" class="kits-section">
+    <h2>🤖 Kits de Robótica</h2>
+
+    <div class="kit-card">
+      <img src="img/kit-basico-robotica.jpg" alt="Kit Básico Robótica">
+      <h3>Kit Básico de Robótica</h3>
+      <p>Incluye Arduino UNO, sensores, motores y cables. Ideal para principiantes.</p>
+      <span class="precio">$120.000 COP</span>
+      <a href="https://wa.me/573001234567" target="_blank" class="btn-vermas">Comprar</a>
+    </div>
+
+    <div class="kit-card">
+      <img src="img/kit-avanzado-robotica.jpg" alt="Kit Avanzado Robótica">
+      <h3>Kit Avanzado de Robótica</h3>
+      <p>Componentes para robots autónomos, sensores ultrasónicos y ESP32.</p>
+      <span class="precio">$250.000 COP</span>
+      <a href="https://wa.me/573001234567" target="_blank" class="btn-vermas">Comprar</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE ELECTRÓNICA -->
+  <section id="electronica" class="kits-section">
+    <h2>⚡ Kits de Electrónica</h2>
+
+    <div class="kit-card">
+      <img src="img/kit-electronica-basico.jpg" alt="Kit Básico Electrónica">
+      <h3>Kit Básico de Electrónica</h3>
+      <p>Incluye resistencias, protoboard, diodos, transistores y fuente de poder.</p>
+      <span class="precio">$80.000 COP</span>
+      <a href="https://wa.me/573001234567" target="_blank" class="btn-vermas">Comprar</a>
+    </div>
+
+    <div class="kit-card">
+      <img src="img/kit-electronica-avanzado.jpg" alt="Kit Avanzado Electrónica">
+      <h3>Kit Avanzado de Electrónica</h3>
+      <p>Incluye Arduino Mega, sensores, pantalla LCD y módulos de comunicación.</p>
+      <span class="precio">$180.000 COP</span>
+      <a href="https://wa.me/573001234567" target="_blank" class="btn-vermas">Comprar</a>
+    </div>
+  </section>
+
+  <!-- BOTÓN VOLVER -->
+  <a href="index.html" class="volver">⬅ Volver al Inicio</a>
+
+  <footer>
+    <p>&copy; 2025 Academia de Robótica y Electrónica - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function mostrarKits() {
+      const seleccion = document.getElementById('tipoKits').value;
+      const secciones = document.querySelectorAll('.kits-section');
+      secciones.forEach(sec => sec.classList.remove('active'));
+
+      if (seleccion) {
+        document.getElementById(seleccion).classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
