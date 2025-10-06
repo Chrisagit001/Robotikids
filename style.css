@@ -238,4 +238,34 @@ footer {
     height: 150px;
   }
 }
+/* 📱 Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container, .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .social-card {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+
 
